@@ -17,6 +17,7 @@ public class SelenideWiki {
         @Test
         void shouldFindSelenideWiki () {
             open("https://github.com/");
+            $("#hero-section-brand-heading").shouldHave(text("Build and ship software on a single, collaborative platform"));
             $("[data-target='qbsearch-input.inputButton']").click();
             $("#query-builder-test").setValue("selenide").pressEnter();
             $(".jJRiHe").shouldHave(text("5.8k results"));

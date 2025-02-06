@@ -20,8 +20,10 @@ compileTestJava {
 }
 
 dependencies {
+    implementation 'org.testng:testng:7.1.0'
+
     // Selenide
-    testImplementation("com.codeborne:selenide:7.0.2")
+    testImplementation("com.codeborne:selenide-testng:6.16.0")
     testRuntimeOnly("org.slf4j:slf4j-simple:2.0.9")
 
     // JUnit 5

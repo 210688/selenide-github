@@ -17,7 +17,8 @@ public class ContributorsTest {
      // Configuration.browserSize = "1600x1080";
         // Configuration.browser = "firefox";
     //  Configuration.timeout = 2000;
- //     Configuration.headless = true;
+ //
+        //     Configuration.headless = true;
 
         open("https://github.com/selenide/selenide");
         $(".Layout-sidebar").$(byText("Contributors"))

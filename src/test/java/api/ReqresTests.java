@@ -1,12 +1,17 @@
 package api;
 
 import io.restassured.RestAssured;
+import models.NameBodyModel;
+import models.NameResponseModel;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ReqresTests {
 
@@ -27,14 +32,23 @@ public class ReqresTests {
 
     @Test
     void postGreateUser() {
-        given()
-                .body("{\"name\": \"morpheus\",\"job\": \"leader\"}")
+        NameBodyModel nameBodyModel = new NameBodyModel();
+        nameBodyModel.setName("morpheus");
+        nameBodyModel.setJob("leader");
+
+        NameResponseModel nameResponseModel =  given()
+                .body(nameBodyModel)
                 .contentType(JSON)
+                .when()
                 .post("/users")
                 .then()
                 .statusCode(201)
-                .body("name", is("morpheus"))
-                .body("job", is("leader"));
+                .extract().as(NameResponseModel.class);
+
+        assertEquals("morpheus", nameResponseModel.getName());
+        assertEquals("leader", nameResponseModel.getJob());
+
+
     }
 
     @Test

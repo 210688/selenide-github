@@ -4,6 +4,7 @@ public class NameResponseModel {
     String name;
     String job;
     String id;
+    String createdAt;
 
     public String getName() {
         return name;
@@ -36,8 +37,5 @@ public class NameResponseModel {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
-
-    String createdAt;
-
 }
 

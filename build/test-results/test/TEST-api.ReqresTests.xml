@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.ReqresTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-03T17:01:31" hostname="WIN-JG2J35FIO8M" time="1.921">
+<testsuite name="api.ReqresTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-03T19:09:23" hostname="WIN-JG2J35FIO8M" time="5.051">
   <properties/>
-  <testcase name="postGreateUser()" classname="api.ReqresTests" time="1.921"/>
+  <testcase name="postGreateLombokUser()" classname="api.ReqresTests" time="5.051"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

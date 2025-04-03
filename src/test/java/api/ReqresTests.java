@@ -1,25 +1,18 @@
 package api;
 
-import io.restassured.RestAssured;
-import models.NameBodyModel;
-import models.NameResponseModel;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import models.lombok.NameBodyLombokModel;
+import models.lombok.NameResponseLombokModel;
 import org.junit.jupiter.api.Test;
 
+import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static specs.NameSpec.requestSpecification;
+import static specs.NameSpec.responseSpecification;
 
 public class ReqresTests {
-
-    @BeforeAll
-    public static void setUp() {
-        RestAssured.baseURI = "https://reqres.in";
-        RestAssured.basePath = "/api";
-    }
 
     @Test
     void getSingleUser() {
@@ -31,24 +24,25 @@ public class ReqresTests {
     }
 
     @Test
-    void postGreateUser() {
-        NameBodyModel nameBodyModel = new NameBodyModel();
-        nameBodyModel.setName("morpheus");
-        nameBodyModel.setJob("leader");
+    void postGreateLombokUser() {
+        NameBodyLombokModel nameBodyLombokModel = new NameBodyLombokModel();
+        nameBodyLombokModel.setName("morpheus");
+        nameBodyLombokModel.setJob("leader");
 
-        NameResponseModel nameResponseModel =  given()
-                .body(nameBodyModel)
-                .contentType(JSON)
-                .when()
-                .post("/users")
-                .then()
-                .statusCode(201)
-                .extract().as(NameResponseModel.class);
+        NameResponseLombokModel nameResponseLombokModel = step("Make request", () ->
+                given(requestSpecification)
+                        .body(nameBodyLombokModel)
 
-        assertEquals("morpheus", nameResponseModel.getName());
-        assertEquals("leader", nameResponseModel.getJob());
+                        .when()
+                        .post()
+                        .then()
+                        .spec(responseSpecification)
+                        .extract().as(NameResponseLombokModel.class));
 
-
+        step("Check response", () -> {
+            assertEquals("morpheus", nameResponseLombokModel.getName());
+            assertEquals("leader", nameResponseLombokModel.getJob());
+        });
     }
 
     @Test
@@ -70,4 +64,5 @@ public class ReqresTests {
                 .then()
                 .statusCode(204);
     }
+
 }

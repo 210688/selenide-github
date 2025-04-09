@@ -18,4 +18,12 @@ public class NameSpec {
     public static ResponseSpecification responseSpecification = new ResponseSpecBuilder()
             .expectStatusCode(201)
             .build();
+
+    public static RequestSpecification requestSpecificationSingle = with()
+            .baseUri("https://reqres.in")
+            .basePath("/api/users/2");
+
+    public static ResponseSpecification responseSpecificationSingle = new ResponseSpecBuilder()
+            .expectStatusCode(200)
+            .build();
 }

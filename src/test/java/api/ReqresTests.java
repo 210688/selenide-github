@@ -2,6 +2,7 @@ package api;
 
 import models.lombok.NameBodyLombokModel;
 import models.lombok.NameResponseLombokModel;
+import models.lombok.SingleUserResponseLombokModel;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -9,18 +10,27 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static specs.NameSpec.requestSpecification;
-import static specs.NameSpec.responseSpecification;
+import static specs.NameSpec.*;
+
 
 public class ReqresTests {
 
     @Test
-    void getSingleUser() {
-        given()
-                .get("/users/2")
-                .then()
-                .statusCode(200)
-                .body("data.id", is(2));
+    void getSingleLombokUser() {
+        SingleUserResponseLombokModel singleUserResponseLombokModel = step("Make request", () ->
+                given(requestSpecificationSingle)
+                        .when()
+                        .get()
+                        .then()
+                        .spec(responseSpecificationSingle)
+                        .extract().as(SingleUserResponseLombokModel.class));
+        step("Check response", () -> {
+            assertEquals(2, singleUserResponseLombokModel.getData().getId());
+            assertEquals("janet.weaver@reqres.in", singleUserResponseLombokModel.getData().getEmail());
+            assertEquals("Janet", singleUserResponseLombokModel.getData().getFirst_name());
+            assertEquals("Weaver", singleUserResponseLombokModel.getData().getLast_name());
+            assertEquals("https://reqres.in/img/faces/2-image.jpg", singleUserResponseLombokModel.getData().getAvatar());
+        });
     }
 
     @Test
@@ -32,7 +42,6 @@ public class ReqresTests {
         NameResponseLombokModel nameResponseLombokModel = step("Make request", () ->
                 given(requestSpecification)
                         .body(nameBodyLombokModel)
-
                         .when()
                         .post()
                         .then()
@@ -47,7 +56,7 @@ public class ReqresTests {
 
     @Test
     void putUpdateUser() {
-        given()
+        given(requestSpecification)
                 .body("{\"name\": \"morpheus\",\"job\": \"zion resident\"}")
                 .contentType(JSON)
                 .put("/users/2")
@@ -59,7 +68,7 @@ public class ReqresTests {
 
     @Test
     void deleteUser() {
-        given()
+        given(requestSpecification)
                 .delete("/users/2")
                 .then()
                 .statusCode(204);

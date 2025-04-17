@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.ReqresTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-17T05:48:23" hostname="WIN-JG2J35FIO8M" time="5.856">
+<testsuite name="api.ReqresTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-17T18:16:29" hostname="WIN-JG2J35FIO8M" time="6.282">
   <properties/>
-  <testcase name="postGreateLombokUser()" classname="api.ReqresTests" time="4.802"/>
-  <testcase name="putUpdateUser()" classname="api.ReqresTests" time="0.32"/>
-  <testcase name="getSingleLombokUser()" classname="api.ReqresTests" time="0.194"/>
-  <testcase name="deleteUser()" classname="api.ReqresTests" time="0.413"/>
+  <testcase name="postGreateLombokUser()" classname="api.ReqresTests" time="5.269"/>
+  <testcase name="putUpdateUser()" classname="api.ReqresTests" time="0.372"/>
+  <testcase name="getSingleLombokUser()" classname="api.ReqresTests" time="0.193"/>
+  <testcase name="deleteUser()" classname="api.ReqresTests" time="0.303"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

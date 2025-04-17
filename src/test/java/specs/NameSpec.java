@@ -20,10 +20,16 @@ public class NameSpec {
             .build();
 
     public static RequestSpecification requestSpecificationSingle = with()
+            .filter(withCustomTemplates())
+            .contentType(JSON)
             .baseUri("https://reqres.in")
             .basePath("/api/users/2");
 
     public static ResponseSpecification responseSpecificationSingle = new ResponseSpecBuilder()
             .expectStatusCode(200)
+            .build();
+
+    public static ResponseSpecification responseSpecificationDeleteSingle = new ResponseSpecBuilder()
+            .expectStatusCode(204)
             .build();
 }

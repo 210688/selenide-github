@@ -1,15 +1,11 @@
 package api;
 
-import models.lombok.NameBodyLombokModel;
-import models.lombok.NameResponseLombokModel;
-import models.lombok.SingleUserResponseLombokModel;
+import models.lombok.*;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static io.restassured.http.ContentType.JSON;
-import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static specs.NameSpec.*;
 
 
@@ -17,7 +13,7 @@ public class ReqresTests {
 
     @Test
     void getSingleLombokUser() {
-        SingleUserResponseLombokModel singleUserResponseLombokModel = step("Make request", () ->
+        SingleUserResponseLombokModel singleUserResponseLombokModel = step("Make request users2", () ->
                 given(requestSpecificationSingle)
                         .when()
                         .get()
@@ -39,7 +35,7 @@ public class ReqresTests {
         nameBodyLombokModel.setName("morpheus");
         nameBodyLombokModel.setJob("leader");
 
-        NameResponseLombokModel nameResponseLombokModel = step("Make request", () ->
+        NameResponseLombokModel nameResponseLombokModel = step("Make request users", () ->
                 given(requestSpecification)
                         .body(nameBodyLombokModel)
                         .when()
@@ -56,22 +52,29 @@ public class ReqresTests {
 
     @Test
     void putUpdateUser() {
-        given(requestSpecification)
-                .body("{\"name\": \"morpheus\",\"job\": \"zion resident\"}")
-                .contentType(JSON)
-                .put("/users/2")
+        NameRequestBodyLombokModel nameRequestBodyLombokModel = new NameRequestBodyLombokModel();
+        nameRequestBodyLombokModel.setName("morpheus");
+        nameRequestBodyLombokModel.setJob("zion resident");
+        ResponseUpdateLombokModel responseUpdateLombokModel = step("Make request users2", () ->
+        given(requestSpecificationSingle)
+                .body(nameRequestBodyLombokModel)
+                .when()
+                .put()
                 .then()
-                .statusCode(200)
-                .body("name", is("morpheus"))
-                .body("job", is("zion resident"));
+                .spec(responseSpecificationSingle)
+                .extract().as(ResponseUpdateLombokModel.class));
+        step("Check response", () -> {
+            assertEquals("morpheus", responseUpdateLombokModel.getName());
+            assertEquals("zion resident", responseUpdateLombokModel.getJob());
+            assertNotEquals(null, responseUpdateLombokModel.getUpdatedAt());
+        });
     }
 
     @Test
     void deleteUser() {
-        given(requestSpecification)
-                .delete("/users/2")
+        given(requestSpecificationSingle)
+                .delete()
                 .then()
-                .statusCode(204);
+                .spec(responseSpecificationDeleteSingle);
     }
-
 }

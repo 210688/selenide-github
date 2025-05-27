@@ -58,7 +58,7 @@ public class LoginTests {
                     .extract()
                     .cookie(authCookieKey);
 
-            open("/favicon.png");
+            open("/Content/jquery-ui-themes/smoothness/images/ui-bg_flat_75_ffffff_40x100.png");
             Cookie authCookie = new Cookie(authCookieKey, authCookieKeyValue);
             getWebDriver().manage().addCookie(authCookie);
 

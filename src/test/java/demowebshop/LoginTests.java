@@ -50,6 +50,6 @@ public class LoginTests extends TestBase {
 
         });
         step("Verify successful autorization", () ->
-                $(byText("qa@qa.guru")).shouldHave(text(login)));
+                $(byText("gordienko210688@gmail.com")).shouldHave(text(login)));
     }
 }

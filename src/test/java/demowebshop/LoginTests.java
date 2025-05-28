@@ -37,13 +37,6 @@ public class LoginTests {
 
     @Test
     void loginWithApiTest() {
-//        step("Open login page", () ->
-//                open("/login"));
-//        step("Fill login form", () -> {
-//            $("#Email").setValue(login);
-//            $("#Password").setValue(password).pressEnter();
-//        });
-
         step("Get authorization cookie by api and set it to browser", () -> {
             String authCookieKey = "NOPCOMMERCE.AUTH";
             String authCookieKeyValue = given()
@@ -51,7 +44,7 @@ public class LoginTests {
                     .formParam("Email", login)
                     .formParam("Password", password)
                     .when()
-                    .post("https://demowebshop.tricentis.com/login")
+                    .post("/login")
                     .then()
                     .log().all()
                     .statusCode(302)

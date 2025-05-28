@@ -24,7 +24,7 @@ public class LoginTests extends TestBase {
             $("#Password").setValue(password).pressEnter();
         });
         step("Verify successful autorization", () ->
-                $(byText("qa@qa.guru")).shouldHave(text(login)));
+                $(byText("gordienko210688@gmail.com")).shouldHave(text(login)));
     }
 
     @Test

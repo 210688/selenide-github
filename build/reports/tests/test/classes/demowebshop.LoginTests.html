@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m33.33s</div>
+<div class="counter">1m37.03s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="percent">50%</div>
 <p>successful</p>
 </div>
 </td>
@@ -80,9 +80,9 @@
 <h3 class="failures">loginWithApiTest()</h3>
 <span class="code">
 <pre>Element not found {by text: qa@qa.guru}
-Expected: text &quot;qa@qa.guru&quot;
-Screenshot: file:/C:/Users/gordi/IdeaProjects/selenide-github/build/reports/tests/1748401686886.0.png
-Page source: file:/C:/Users/gordi/IdeaProjects/selenide-github/build/reports/tests/1748401686886.0.html
+Expected: text &quot;gordienko210688@gmail.com&quot;
+Screenshot: file:/C:/Users/gordi/IdeaProjects/selenide-github/build/reports/tests/1748409280752.0.png
+Page source: file:/C:/Users/gordi/IdeaProjects/selenide-github/build/reports/tests/1748409280752.0.html
 Timeout: 4 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:68)
@@ -112,10 +112,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [523910de36f2e24defd16648c09155c4, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [c956ba81e36b4380d6069f162fc60c75, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
              ​‌‍  ⁠　', '                       ')) = &quot;qa@qa.guru&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 136.0.7103.92 (cb81a4cc5087..., userDataDir: C:\Users\gordi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58648/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 523910de36f2e24defd16648c09155c4
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 136.0.7103.92 (cb81a4cc5087..., userDataDir: C:\Users\gordi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54652}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54652/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c956ba81e36b4380d6069f162fc60c75
 	at jdk.internal.reflect.GeneratedConstructorAccessor22.newInstance(Unknown Source)
 	at java.base@17.0.3/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base@17.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -153,8 +153,13 @@ Session ID: 523910de36f2e24defd16648c09155c4
 </thead>
 <tr>
 <td class="failures">loginWithApiTest()</td>
-<td class="failures">1m33.33s</td>
+<td class="failures">1m34.07s</td>
 <td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">loginWithUITest()</td>
+<td class="success">2.963s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -164,12 +169,12 @@ Session ID: 523910de36f2e24defd16648c09155c4
 <pre>HTTP/1.1 302 Found
 Content-Length: 118
 Content-Type: text/html; charset=utf-8
-Date: Wed, 28 May 2025 03:06:36 GMT
+Date: Wed, 28 May 2025 05:13:09 GMT
 Server: Microsoft-IIS/10.0
 Cache-Control: private
 Location: /
-Set-Cookie: Nop.customer=873573a2-87cf-4f64-a118-204c1ed8b2ad; expires=Thu, 28-May-2026 03:06:36 GMT; path=/; HttpOnly
-Set-Cookie: NOPCOMMERCE.AUTH=F89DE6BC54DD2F8207B82DEBEB30455A9A5E68027579C8F0248EDA563B6268E0887505848173478AD479BE697E3367DF7F8C6152AFC4457A41C096086FAC0D0529B56D4886E0D5EE1771A2097AC14AECFC1246415119D44395FED9F11E89BCD6251F6B15D82446D05C4DB1A1D6FF22936CCE4C0432ADA968A7B6F4D6B1C43C22; path=/; HttpOnly
+Set-Cookie: Nop.customer=e534b276-119c-44be-943d-c38f02cdf742; expires=Thu, 28-May-2026 05:13:09 GMT; path=/; HttpOnly
+Set-Cookie: NOPCOMMERCE.AUTH=0F0B8F707FF360739D4F5D94FBAC95C15926D62C6C5563464D9F17A8855D2E39AD80DF8F54B33E6862B455740383E47A9D4C8778457929F3E4E2CB57E9142B55FD858872233979EAEC015A1A957634125DFDD6DC52CE4F9891811998B31E7D03DE86AE146CEB1438DBCA9B2B40B4E53CC06EC4F0876F7269EF1FA52D986031A60958FA1575DDE54EE24DDE64BBFB1305A6EED265B028A763904516B4E1D52F477867AC12D65E8030142FFD276A391E32; path=/; HttpOnly
 Set-Cookie: ARRAffinity=ec1109f6c46ef92a7fbdc79be20e8394b7150240fc23fa37f3ae8d985f1595a0;Path=/;HttpOnly;Secure;Domain=demowebshop.tricentis.com
 Set-Cookie: ARRAffinitySameSite=ec1109f6c46ef92a7fbdc79be20e8394b7150240fc23fa37f3ae8d985f1595a0;Path=/;HttpOnly;SameSite=None;Secure;Domain=demowebshop.tricentis.com
 X-AspNetMvc-Version: 5.2
@@ -193,11 +198,11 @@ Object moved to       &lt;a shape=&quot;rect&quot; href=&quot;/&quot;&gt;here&lt
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-мая 28, 2025 6:08:01 AM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+мая 28, 2025 8:14:34 AM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
 WARNING: There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
-мая 28, 2025 6:08:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мая 28, 2025 8:14:36 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-мая 28, 2025 6:08:02 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+мая 28, 2025 8:14:36 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 137.0.7151.56. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.27.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.7.0 / Selenium 4.27.0 / chrome 137.0.7151.56 windows
 </pre>
@@ -211,7 +216,7 @@ WARNING: Unable to find version of CDP to use for 137.0.7151.56. You may need to
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 28 мая 2025 г., 06:08:07</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 28 мая 2025 г., 08:14:45</p>
 </div>
 </div>
 </body>

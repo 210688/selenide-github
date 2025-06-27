@@ -25,7 +25,7 @@ public class WebTests {
     void commonComplexSearchTest(String testData, String expectedResult){
         open("https://translate.yandex.ru/");
         $("#fakeArea").setValue(testData);
-        $$("#translation")
+        $$("#dstBox")
                 .first()
                 .shouldHave(text(expectedResult));
     }

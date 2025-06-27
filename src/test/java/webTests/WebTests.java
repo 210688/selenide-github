@@ -12,20 +12,20 @@ public class WebTests {
     @ValueSource(strings = {"Hello", "World"})
     @ParameterizedTest(name = "Результаты перевода не пустые для слова {0}")
     void commonSearchTest(String testData){
-        open("https://translate.yandex.ru/");
-        $("#fakeArea").setValue(testData);
-        $$("#translation").shouldBe(CollectionCondition.sizeGreaterThan(0));
+        open("https://translate.google.com/?sl=en&tl=ru&op=translate/");
+        $(".er8xn").setValue(testData);
+        $$(".ryNqvb").shouldBe(CollectionCondition.sizeGreaterThan(0));
 
     }
     @CsvSource(value = {
-            "Hello, Здравствуйте",
+            "Hello, Привет",
             "World, Мир"
     })
     @ParameterizedTest(name = "Результаты перевода - \"{1}\" для слова: \"{0}\"")
     void commonComplexSearchTest(String testData, String expectedResult){
-        open("https://translate.yandex.ru/");
-        $("#fakeArea").setValue(testData);
-        $$("#dstBox")
+        open("https://translate.google.com/?sl=en&tl=ru&op=translate");
+        $(".er8xn").setValue(testData);
+        $$(".ryNqvb")
                 .first()
                 .shouldHave(text(expectedResult));
     }

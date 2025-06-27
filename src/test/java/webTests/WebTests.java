@@ -8,9 +8,7 @@ import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
-
 public class WebTests {
-
     @ValueSource(strings = {"Hello", "World"})
     @ParameterizedTest(name = "Результаты перевода не пустые для слова {0}")
     void commonSearchTest(String testData){
@@ -19,7 +17,6 @@ public class WebTests {
         $$("#translation").shouldBe(CollectionCondition.sizeGreaterThan(0));
 
     }
-
     @CsvSource(value = {
             "Hello, Здравствуйте",
             "World, Мир"
@@ -32,7 +29,6 @@ public class WebTests {
                 .first()
                 .shouldHave(text(expectedResult));
     }
-
 
     static Stream<Arguments> ioStartMenuTest() {
         return Stream.of(

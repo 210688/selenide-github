@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="webTests.WebTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-06-27T04:31:00" hostname="ALICKGAN" time="12.895">
+<testsuite name="webTests.WebTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-07-04T10:03:02" hostname="ALICKGAN" time="13.048">
   <properties/>
-  <testcase name="Результаты перевода не пустые для слова Hello" classname="webTests.WebTests" time="2.993"/>
-  <testcase name="Результаты перевода не пустые для слова World" classname="webTests.WebTests" time="1.201"/>
-  <testcase name="Для локали EN  отображаются кнопки [TESTING EXPERTISE, FOR YOUR INDUSTRY, SOLUTIONS, INSIGHTS &amp; SUCCESS STORIES, ABOUT US]" classname="webTests.WebTests" time="4.562"/>
-  <testcase name="Для локали DE  отображаются кнопки [SERVICES, CROWDTESTING, GERÄTEABDECKUNG, RESSOURCEN, COMPANY]" classname="webTests.WebTests" time="1.943"/>
-  <testcase name="Результаты перевода - &quot;Привет&quot; для слова: &quot;Hello&quot;" classname="webTests.WebTests" time="1.138"/>
-  <testcase name="Результаты перевода - &quot;Мир&quot; для слова: &quot;World&quot;" classname="webTests.WebTests" time="1.028"/>
+  <testcase name="Результаты перевода не пустые для слова Hello" classname="webTests.WebTests" time="3.278"/>
+  <testcase name="Результаты перевода не пустые для слова World" classname="webTests.WebTests" time="1.4"/>
+  <testcase name="Для локали EN  отображаются кнопки [CAPABILITIES, BY INDUSTRY, SOLUTIONS, OUR CUSTOMERS]" classname="webTests.WebTests" time="4.193"/>
+  <testcase name="Для локали DE  отображаются кнопки [SERVICES, CROWDTESTING, GERÄTEABDECKUNG, RESSOURCEN, COMPANY]" classname="webTests.WebTests" time="1.74"/>
+  <testcase name="Результаты перевода - &quot;Привет&quot; для слова: &quot;Hello&quot;" classname="webTests.WebTests" time="1.359"/>
+  <testcase name="Результаты перевода - &quot;Мир&quot; для слова: &quot;World&quot;" classname="webTests.WebTests" time="1.05"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\gordi\IdeaProjects\ParametrsTests\build\downloads\1750998660901_16100_1
-июн. 27, 2025 7:31:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\gordi\IdeaProjects\ParametrsTests\build\downloads\1751623382285_29944_1
+июл. 04, 2025 1:03:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-июн. 27, 2025 7:31:02 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+июл. 04, 2025 1:03:03 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.50. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.19.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=138.0.7204.50 Platform=windows
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 7.2.3
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.19.1 build revision: abe0ee07dc
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (c7940d616a7dcaccf5abda9e9db7b8a9), downloadsFolder: C:\Users\gordi\IdeaProjects\ParametrsTests\build\downloads\1750998660901_16100_1
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig, webDriver=ChromeDriver: chrome on windows (c7940d616a7dcaccf5abda9e9db7b8a9), proxy=null, downloadsFolder=C:\Users\gordi\IdeaProjects\ParametrsTests\build\downloads\1750998660901_16100_1] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (3e5bf76aca4bf312a5c01457459c4d2d), downloadsFolder: C:\Users\gordi\IdeaProjects\ParametrsTests\build\downloads\1751623382285_29944_1
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig, webDriver=ChromeDriver: chrome on windows (3e5bf76aca4bf312a5c01457459c4d2d), proxy=null, downloadsFolder=C:\Users\gordi\IdeaProjects\ParametrsTests\build\downloads\1751623382285_29944_1] in 1 [size=1]
 [Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
 ]]></system-err>
 </testsuite>

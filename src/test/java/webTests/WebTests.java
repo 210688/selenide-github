@@ -32,7 +32,7 @@ public class WebTests {
 
     static Stream<Arguments> ioStartMenuTest() {
         return Stream.of(
-                Arguments.of("EN ", List.of("TESTING EXPERTISE", "FOR YOUR INDUSTRY", "SOLUTIONS", "INSIGHTS & SUCCESS STORIES", "ABOUT US")),
+                Arguments.of("EN ", List.of("CAPABILITIES", "BY INDUSTRY", "SOLUTIONS", "OUR CUSTOMERS")),
                 Arguments.of("DE ", List.of("SERVICES", "CROWDTESTING", "GERÄTEABDECKUNG", "RESSOURCEN", "COMPANY"))
         );
     }

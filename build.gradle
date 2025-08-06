@@ -8,13 +8,13 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 allure {
     report {
-        version.set("2.27.0") //версия Allure Report (https://github.com/allure-framework/allure2)
+        version.set("2.27.0")
     }
     adapter {
-        aspectjWeaver.set(true) // обработка аннотации @Step
+        aspectjWeaver.set(true)
         frameworks {
             junit5 {
-                adapterVersion.set("2.27.0") //версия Allure JUnit5 (https://github.com/allure-framework/allure-java)
+                adapterVersion.set("2.27.0")
             }
         }
     }

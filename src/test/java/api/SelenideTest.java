@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static org.hamcrest.Matchers.containsString;
 import static org.openqa.selenium.By.linkText;
 
 public class SelenideTest {
@@ -23,6 +24,7 @@ public class SelenideTest {
         open("https://github.com/");
         $("[data-target='qbsearch-input.inputButton']").click();
         $("#query-builder-test").setValue("selenide").pressEnter();
+        $(".Box-sc-g0xbh4-0.JcuiZ").shouldHave(text("selenide/selenide"));
         $(linkText("selenide/selenide")).click();
         $("#issues-tab").click();
         $(byText("Add unHighliter() method")).shouldHave(text("Add unHighliter() method"));
